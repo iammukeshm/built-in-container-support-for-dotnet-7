@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+<PropertyGroup>
+  <ContainerImageName>hellodocker7</ContainerImageName>
+  <PublishProfile>DefaultContainer</PublishProfile>
+  <ContainerImageTags>1.1.0;latest</ContainerImageTags>
+  <RuntimeIdentifier>linux-x64</RuntimeIdentifier>    
+</PropertyGroup>
+
+<ItemGroup>
+  <ContainerPort Include="80" Type="tcp" />
+</ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.2" />
+    <PackageReference Include="Microsoft.NET.Build.Containers" Version="0.3.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+</Project>
